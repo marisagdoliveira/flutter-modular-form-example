@@ -11,7 +11,8 @@ class DetailsScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('Enter your favorite song:'),
+          const Text('Enter your favorite song:',
+           style: TextStyle(fontSize: 24)),
           const SongForm(),
           const SizedBox(height: 32),
           Center(
