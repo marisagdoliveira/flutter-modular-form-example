@@ -24,12 +24,11 @@ class _SongFormState extends ConsumerState<SongForm> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      ref.read(songNotifierProvider.notifier).setSong(
-            _artistController.text.trim(),
-            _songController.text.trim(),
-          );
+      ref
+          .read(songNotifierProvider.notifier)
+          .setSong(_artistController.text.trim(), _songController.text.trim());
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Song submitted!')),
+        const SnackBar(content: Text('Song submitted! Check your homepage ;)')),
       );
     }
   }
@@ -47,10 +46,7 @@ class _SongFormState extends ConsumerState<SongForm> {
             const SizedBox(height: 16),
             SongFormField(controller: _songController),
             const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: _submitForm,
-              child: const Text('Submit'),
-            ),
+            ElevatedButton(onPressed: _submitForm, child: const Text('Submit')),
           ],
         ),
       ),

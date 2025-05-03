@@ -17,7 +17,15 @@ class HomeScreen extends ConsumerWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center, // horizontal centering
           children: [
+            const Text(
+              'This is your favorite song displayer',
+              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 24), // create space below the text
+
             if (song != null)
               Text(
                 'Your favorite song: "${song.$2}" by ${song.$1}',
@@ -33,6 +41,5 @@ class HomeScreen extends ConsumerWidget {
         ),
       ),
     );
-
   }
 }
